@@ -66,20 +66,19 @@
 
 \begin{document}
 \maketitle
-\section*{Sobre este documento}
+\section{Sobre este documento}
 Este documento contiene respuestas a una serie de preguntas vistas en la diapositiva introductoria provista en la materia de Modelación y Simulación.
 La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el archivo intro.pdf.} % tengo que usar ../ porque el viewer se abre en el directorio build/
 
 
-\section*{Preguntas del PDF}
+\section{Preguntas del PDF}
 \begin{figure}[H]
 	\centering
-	\includegraphics[page=3,scale=0.9]{./references/intro.pdf}
-	\caption{Página 3 de la presentación titulada <<Introducción>>, Modelación y Simulación, Semestre 2/2025.}
+	\includegraphics[page=3,width=\textwidth]{./references/intro.pdf}
 \end{figure}
 
-\section*{Respuestas}
-\subsection*{Introducción}
+\section{Respuestas}
+\subsection{Introducción}
 \begin{enumerate}
 	\item La simulación se refiere a un gran conjunto de métodos y aplicaciones
 	      que buscan imitar el comportamiento de sistemas reales, generalmente por medio de
@@ -96,31 +95,20 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 		      \item \small{\textbf{Simulación Basada en Agentes}: Modela sistemas donde múltiples entidades autónomas (agentes) interactúan entre sí (ej. mercados económicos, comportamiento social).} % TODO: agregar cita referenciando la diapositiva "TEMA 1" de la Ing. Gladys Machuca.
 	      \end{itemize}
 \end{enumerate}
-\subsection*{Terminología Básica}
+\subsection{Terminología Básica}
 \begin{enumerate}
 	\item Un modelo es una representación o abstracción de una situación real, el cual puede ser de varios tipos. Se diferencia de un sistema real en la medida que el objeto del modelo es poder comprender, predecir y controlar el comportamiento de un sistema dado.
 	\item Definiciones:
 	      \begin{itemize}
 		      \item \textbf{Entidad:} Por lo general es \textit{la representación de los flujos de entrada y salida en un sistema;} al entrar a un sistema una entidad es el elemento responsable de que el estado del sistema cambie. \cite[p.~4]{garcia2013simpromodel}
-		      \item \textbf{Atributo:} Es una \textit{característica de una entidad}. Son muy útiles
+		      \item \textbf{Atributo:} Es una característica de una entidad. Son muy útiles
 		            para diferenciar entidades sin necesidad de generar una nueva, y pueden adjudicarse al
-		            momento de la creación de la entidad, asignarse o cambiarse durante el proceso. \cite[p.~6]{garcia2013simpromodel}
-		      \item \textbf{Evento:} Es un \textit{cambio en el estado actual del sistema.} Existen dos tipos principales de eventos: \begin{itemize}
-			            \item \textbf{Eventos actuales:} Aquellos que están sucediendo en el sistema en un momento dado.
-			            \item \textbf{Eventos futuros:} Cambios que
-			                  se presentaran en el sistema después del tiempo de simulación, de acuerdo con una pro­
-			                  gramación específica.
-		            \end{itemize} \cite[p.~4]{garcia2013simpromodel}
+		            momento de la creación de la entidad, o asignarse y/o cambiarse durante el proceso. \cite[p.~6]{garcia2013simpromodel}
+		      \item \textbf{Evento:}
 	      \end{itemize}
-	\item \begin{itemize}
-		      \item \textbf{Verificación:} Proceso en el cual, una vez identificado las distribuciones de probabilidad de las variables del modelo y se han implantado los supuestos acordados, se comprueba la propiedad de la programación del modelo, asegurándonos que todos los parámetros en la simulación funcionen correctamente. \cite[p.~13]{garcia2013simpromodel}
-		      \item \textbf{Validación:} Proceso que consiste en pruebas simultáneas con información de entrada real para observar su comportamiento y analizar sus resultados. \cite[p.~14]{garcia2013simpromodel}
-	      \end{itemize}
-	\item Se define como el \textit{periodo que se modela}, que puede ser diferente del tiempo real. % Extraido de la diapositiva TEMA 1 de la Ing. Gladys.
 \end{enumerate}
-\subsection*{Conceptos Fundamentales de Simulación}
-\subsection*{Ventajas y Desventajas del Uso de la Simulación}
+\subsection{Conceptos Fundamentales de Simulación}
+\subsection{Ventajas y Desventajas del Uso de la Simulación}
 
-\newpage
 \printbibliography[title={Referencias}]
 \end{document}
