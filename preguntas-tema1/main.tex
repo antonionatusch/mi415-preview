@@ -23,6 +23,7 @@
 \usepackage{psfrag}
 \usepackage{pgfplots}
 \usepackage{bm}
+\usepackage{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Other Settings
@@ -86,9 +87,9 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 	      una computadora con un software apropiado.
 	      Es una herramienta útil en diversas disciplinas ya que, al ser independiente del dominio del problema, es posible
 	      recrear situaciones o resultados tantos físicos como teóricos, teniendo su aplicación en sectores como ser la aeronáutica, procesos industriales, etc.
-	      \cite[p.~2]{garcia2013simpromodel}
+	      \citetitle[p.~2]{garcia2013simpromodel}
 	\item Su propósito es crear una representación simplificada y abstracta de un problema real.
-	\item En un modelo determinista, las relaciones entre los cambios de las variables del modelo son constantes. En cambio, en un modelo estocástico, los cambios en las variables suelen seguir algún modelo probabilístico donde el resultado después de un evento no siempre es el mismo. \cite[p.~3]{garcia2013simpromodel}
+	\item En un modelo determinista, las relaciones entre los cambios de las variables del modelo son constantes. En cambio, en un modelo estocástico, los cambios en las variables suelen seguir algún modelo probabilístico donde el resultado después de un evento no siempre es el mismo. \citetitle[p.~3]{garcia2013simpromodel}
 	\item Los tipos más comunes de simulación que existen son:
 	      \begin{itemize}
 		      \item \textbf{Simulación Continua}: Modela sistemas en los que los cambios ocurren continuamente a lo largo del tiempo (ej. modelos de crecimiento poblacional).
@@ -101,24 +102,120 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 	\item Un modelo es una representación o abstracción de una situación real, el cual puede ser de varios tipos. Se diferencia de un sistema real en la medida que el objeto del modelo es poder comprender, predecir y controlar el comportamiento de un sistema dado.
 	\item Definiciones:
 	      \begin{itemize}
-		      \item \textbf{Entidad:} Por lo general es \textit{la representación de los flujos de entrada y salida en un sistema;} al entrar a un sistema una entidad es el elemento responsable de que el estado del sistema cambie. \cite[p.~4]{garcia2013simpromodel}
+		      \item \textbf{Entidad:} Por lo general es \textit{la representación de los flujos de entrada y salida en un sistema;} al entrar a un sistema una entidad es el elemento responsable de que el estado del sistema cambie. \citetitle[p.~4]{garcia2013simpromodel}
 		      \item \textbf{Atributo:} Es una \textit{característica de una entidad}. Son muy útiles
 		            para diferenciar entidades sin necesidad de generar una nueva, y pueden adjudicarse al
-		            momento de la creación de la entidad, asignarse o cambiarse durante el proceso. \cite[p.~6]{garcia2013simpromodel}
+		            momento de la creación de la entidad, asignarse o cambiarse durante el proceso. \citetitle[p.~6]{garcia2013simpromodel}
 		      \item \textbf{Evento:} Es un \textit{cambio en el estado actual del sistema.} Existen dos tipos principales de eventos: \begin{itemize}
 			            \item \textbf{Eventos actuales:} Aquellos que están sucediendo en el sistema en un momento dado.
 			            \item \textbf{Eventos futuros:} Cambios que
 			                  se presentaran en el sistema después del tiempo de simulación, de acuerdo con una pro­
 			                  gramación específica.
-		            \end{itemize} \cite[p.~4]{garcia2013simpromodel}
+		            \end{itemize} \citetitle[p.~4]{garcia2013simpromodel}
 	      \end{itemize}
 	\item \begin{itemize}
-		      \item \textbf{Verificación:} Proceso en el cual, una vez identificado las distribuciones de probabilidad de las variables del modelo y se han implantado los supuestos acordados, se comprueba la propiedad de la programación del modelo, asegurándonos que todos los parámetros en la simulación funcionen correctamente. \cite[p.~13]{garcia2013simpromodel}
-		      \item \textbf{Validación:} Proceso que consiste en pruebas simultáneas con información de entrada real para observar su comportamiento y analizar sus resultados. \cite[p.~14]{garcia2013simpromodel}
+		      \item \textbf{Verificación:} Proceso en el cual, una vez identificado las distribuciones de probabilidad de las variables del modelo y se han implantado los supuestos acordados, se comprueba la propiedad de la programación del modelo, asegurándonos que todos los parámetros en la simulación funcionen correctamente. \citetitle[p.~13]{garcia2013simpromodel}
+		      \item \textbf{Validación:} Proceso que consiste en pruebas simultáneas con información de entrada real para observar su comportamiento y analizar sus resultados. \citetitle[p.~14]{garcia2013simpromodel}
 	      \end{itemize}
 	\item Se define como el \textit{periodo que se modela}, que puede ser diferente del tiempo real. % Extraido de la diapositiva TEMA 1 de la Ing. Gladys.
 \end{enumerate}
 \subsection*{Conceptos Fundamentales de Simulación}
+\begin{enumerate}[label*=\arabic*.]
+	\item Los pasos principales en el proceso de desarrollo de un modelo de simulación son:
+	      \begin{enumerate}[label*=\arabic*.]
+		      \item \textbf{Definición del sistema bajo estudio:} En esta etapa es necesario conocer el sistema a modelar.
+		            Para ello se requiere saber qué origina el estudio de simulación y establecer los supuestos del modelo: es conveniente definir con claridad
+		            las variables de decisión del modelo, determinar las interacciones entre éstas,
+		            y establecer con precisión los alcances y limitaciones que aquel podría llegar a tener.
+
+		      \item \textbf{Generación del modelo de simulación base:} Una vez que se ha definido el
+		            sistema en términos de un modelo conceptual, la siguiente etapa del estudio
+		            consiste en la generación de un modelo de simulación base.
+		            \\No es preciso que este modelo sea demasiado detallado, pues se requiere mucha más información
+		            estadística sobre el comportamiento de las variables de decision del sistema.
+		            La generación de este modelo es el primer reto para el programador de la simulación,
+		            ya que debe traducir a un lenguaje de simulación la información que se
+		            obtuvo en la etapa de definición del sistema, e incluir las interrelaciones de
+		            todos los posibles subsistemas que existan en el problema a modelar.
+
+		      \item \textbf{Recolección y análisis de datos:} En esta etapa se debe establecer qué información
+		            es útil para la determinación de las distribuciones de probabilidad asociadas a
+		            cada una de las variables aleatorias necesarias para la simulación.
+
+		            Más
+		            adelante se hará el análisis de los datos indispensables para asociar una distribución
+		            de probabilidad a una variable aleatoria, así como las pruebas que se le
+		            deben aplicar. Al finalizar la recolección y análisis de datos para todas las variables del modelo,
+		            se tendrán las condiciones para \textit{\textbf{generar}} una versión \textit{\textbf{preliminar}}
+		            del problema que se está simulando.
+
+		      \item \textbf{Generación del modelo preliminar:} En esta etapa se integra la información
+		            obtenida a partir del análisis de los datos, los supuestos del modelo y todos los
+		            datos necesarios para crear un modelo lo más cercano posible a la realidad del
+		            problema bajo estudio.
+
+		            Al finalizar esta
+		            etapa el \underline{modelo} está listo para su primera prueba: su \textit{\textbf{verificación}} o, en otras
+		            palabras, la comparación con la realidad.
+
+		      \item \textbf{Verificación del modelo:} Una vez que se han identificado las distribuciones de
+		            probabilidad de las variables del modelo y se han implantado los supuestos
+		            acordados, es necesario realizar un proceso de verificación de datos para comprobar la propiedad de
+		            la programación del modelo, y comprobar que todos los
+		            parámetros usados en la simulación funcionen correctamente.
+
+		            Una vez que se ha completado la verificación, el modelo está listo para su
+		            comparación con la realidad del problema que se esta modelando. A esta etapa
+		            se le conoce también como \textit{\textbf{validación del modelo.}}
+
+		      \item \textbf{Validación del modelo:} El proceso de validación del modelo consiste en realizar
+		            una serie de pruebas simultáneas con información de entrada real para observar
+		            su comportamiento y analizar sus resultados.
+		            \\Si el problema bajo simulación involucra un proceso que se desea mejorar,
+		            el modelo debe someterse a prueba con las condiciones actuales de operación,
+		            lo que nos dará como resultado un comportamiento similar al que se presenta
+		            realmente en nuestro proceso. \\Por otro lado, si se esta diseñando un nuevo proceso
+		            la validación resulta mas complicada. Una manera de validar el modelo en
+		            este caso, consiste en introducir algunos escenarios sugeridos por el cliente y
+		            validar que el comportamiento sea congruente con las expectativas que se tienen
+		            de acuerdo con la experiencia.
+
+		      \item \textbf{Generación del modelo final:} Una vez que el modelo se ha validado, el analista
+		            esta listo para realizar la simulación y estudiar el comportamiento del proceso.
+		            En caso de que se desee comparar escenarios diferentes para un mismo problema,
+		            este sera el modelo \textit{raíz}; en tal situación, el siguiente paso es la \textit{\textbf{definición de los escenarios a analizar.}}
+
+		      \item \textbf{Determinación de los escenarios para el análisis:} Tras validar el modelo es
+		            necesario acordar con el cliente los escenarios que se quieren analizar. Una
+		            manera muy sencilla de determinarlos consiste en utilizar un escenario pesimista,
+		            uno optimista y uno intermedio para la variable de respuesta mas importante.
+
+		      \item \textbf{Análisis de sensibilidad:} Una vez que se obtienen los resultados de los escenarios
+		            es importante realizar pruebas estadísticas que permitan comparar los escenarios
+		            con los mejores resultados finales. Si dos de ellos tienen resultados
+		            similares será necesario comparar sus intervalos de confianza respecto de la variable de respuesta final.
+		            Si no hay intersección de intervalos podremos decir con
+		            certeza estadística que los resultados no son iguales; sin embargo, si los intervalos
+		            se sobreponen será imposible definir estadísticamente que una solución es mejor
+		            que otra. Si se desea obtener un escenario "ganador”, será necesario realizar más
+		            réplicas de cada modelo o incrementar el tiempo de simulación de cada corrida.
+		            Con ello se busca acortar los intervalos de confianza de las soluciones finales y,
+		            por consiguiente, incrementar la probabilidad de diferenciar las soluciones.
+
+		      \item \textbf{Documentación del modelo, sugerencias y conclusiones:} Una vez realizado el
+		            análisis de los resultados, es necesario efectuar toda la documentación del modelo.
+		            Esta documentación es muy importante, pues permitirá el uso del modelo
+		            generado en caso de que se requieran ajustes futuros. En ella se deben incluir los
+		            supuestos del modelo, las distribuciones asociadas a sus variables, todos sus
+		            alcances y limitaciones y, en general, la totalidad de las consideraciones de programación.
+                También es importante incluir sugerencias tanto respecto del uso del
+		            modelo como sobre los resultados obtenidos, con el propósito de realizar un
+		            reporte mas completo. Por último, deberán presentarse las conclusiones del
+		            proyecto de simulación, a partir de las cuales es posible obtener los reportes
+		            ejecutivos para la presentación final.
+
+	      \end{enumerate} \citetitle[p.~12--15]{garcia2013simpromodel}
+\end{enumerate}
 \subsection*{Ventajas y Desventajas del Uso de la Simulación}
 
 \newpage
