@@ -4,6 +4,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{geometry}
+\usepackage{parskip}
 \usepackage{float}
 \usepackage{biblatex}
 \usepackage{csquotes}
@@ -11,6 +12,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -24,13 +26,21 @@
 \usepackage{pgfplots}
 \usepackage{bm}
 \usepackage{enumitem}
+\usepackage{titlesec}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Other Settings
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \geometry{a4paper}
-
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{MI415 - Modelación y Simulación}
+\fancyhead[R]{Preguntas Introductorias Tema 1}
+\fancyfoot[R]{\thepage}
+\fancyfoot[L]{Antonio Natusch Zarco\\2022111958}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{ocre}{RGB}{243,102,25}
 \definecolor{mygray}{RGB}{243,243,244}
@@ -61,26 +71,63 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{\textbf{Preguntas Tema 1}}
-\author{Antonio Natusch}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\titleformat{\section}{\Large\bfseries}{\thesection.}{0.5em}{}
+
 \begin{document}
-\maketitle
+
+% Cover page
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Universidad Privada de Santa Cruz de la Sierra \par}
+	\vspace{1.5cm}
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{figures/upsa-logo.png}
+		\end{center}
+	\end{figure}
+
+	\vspace{1.5cm}
+	{\huge\bfseries Preguntas Introductorias Tema 1 \par}
+	\vspace{1cm}
+	{\Large\bfseries MI415 -- Modelación y Simulación\par}
+	\vfill
+	{\Large \textbf{Código de estudiante:} 2022111958\par}
+	{\Large \textbf{Nombre:} Antonio Miguel Natusch Zarco\par}
+	{\Large \textbf{Semestre:} Semestre 1/2026 \par}
+	\vspace{1cm}
+	\vfill
+	\thispagestyle{empty}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\phantomsection
 \section*{Sobre este documento}
+\addcontentsline{toc}{section}{Sobre este documento}
 Este documento contiene respuestas a una serie de preguntas vistas en la diapositiva introductoria provista en la materia de Modelación y Simulación.
 La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el archivo intro.pdf.} % tengo que usar ../ porque el viewer se abre en el directorio build/
 
 
 \section*{Preguntas del PDF}
+\addcontentsline{toc}{section}{Preguntas del PDF}
 \begin{figure}[H]
 	\centering
 	\includegraphics[page=3,scale=0.9]{./references/intro.pdf}
 	\caption{Página 3 de la presentación titulada ``Introducción'', Modelación y Simulación, Semestre 2/2025.}
 \end{figure}
 
+\newpage
+\phantomsection
 \section*{Respuestas}
+\addcontentsline{toc}{section}{Respuestas}
+\phantomsection
 \subsection*{Introducción}
+\addcontentsline{toc}{subsection}{Introducción}
 \begin{enumerate}
 	\item \textbf{La simulación y por qué es una herramienta útil:} La simulación se refiere
 	      a un gran conjunto de métodos y aplicaciones
@@ -107,7 +154,10 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 			            (agentes) interactúan entre sí (ej. mercados económicos, comportamiento social).}
 	      \end{itemize}\citetitle[p.~2]{machuca2025modysimtema1}
 \end{enumerate}
+\phantomsection
+\newpage
 \subsection*{Terminología Básica}
+\addcontentsline{toc}{subsection}{Terminología Básica}
 \begin{enumerate}
 	\item \textbf{Qué es un modelo y cómo se diferencia de un sistema real:} Un modelo es una representación
 	      o abstracción de una situación real, el cual puede ser de varios tipos.
@@ -156,7 +206,10 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 	      En el contexto del software \textbf{ProModel}, se introduce en el campo \textbf{``Run hours''}
 	      dentro del comando \textbf{``Options''}, en el menú \textbf{``Simulation''}. \citetitle[p.~162]{garcia2013simpromodel}
 \end{enumerate}
+\phantomsection
+\newpage
 \subsection*{Conceptos Fundamentales de Simulación}
+\addcontentsline{toc}{subsection}{Conceptos Fundamentales de Simulación}
 \begin{enumerate}[label*=\arabic*.]
 	\item \textbf{Los pasos principales en el proceso de desarrollo de un modelo de simulación son:}
 	      \begin{enumerate}[label*=\arabic*.]
@@ -283,7 +336,10 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 	      parámetros de arranque. \citetitle[p.~22]{garcia2013simpromodel}
 
 \end{enumerate}
+\phantomsection
+\newpage
 \subsection*{Ventajas y Desventajas del Uso de la Simulación}
+\addcontentsline{toc}{subsection}{Ventajas y Desventajas del Uso de la Simulación}
 \begin{enumerate}
 	\item \textbf{Principales ventajas del uso de la simulación en la toma de decisiones:} Algunas ventajas incluyen:
 	      \begin{enumerate}
@@ -320,6 +376,7 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 		            idealistas, mucho más de lo que sería posible en la vida real, debido a una mala
 		            parametrización.
 	      \end{enumerate} \citetitle[p.~10]{garcia2013simpromodel}
+	      \newpage
 	\item \textbf{Situaciones donde es más beneficioso un modelo de simulación sobre un modelo analítico:}
 	      \begin{enumerate}
 		      \item \textbf{Sistemas Complejos:} Cuando el sistema es demasiado complejo para ser descrito adecuadamente mediante análisis analíticos.
@@ -327,7 +384,6 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 		      \item \textbf{Experimentación Segura:} Necesario experimentar con diferentes políticas o escenarios sin riesgos para el sistema real.
 		      \item \textbf{Comprensión Visual:} Se busca una comprensión visual e interactiva del comportamiento del sistema.
 	      \end{enumerate} \citetitle[p.~7]{machuca2025modysimtema1}
-	      \newpage
 	\item \textbf{Identificación y mitigación de riesgos en un proyecto mediante la simulación:} La simulación permite identificar y mitigar riesgos en un proyecto al:
 	      \begin{enumerate}
 		      \item \textbf{Modelar Escenarios de Riesgo:} Crear modelos que representen diferentes escenarios de riesgo.
@@ -337,5 +393,9 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 	      \end{enumerate}
 \end{enumerate}
 
+\newpage
+
+\phantomsection
 \printbibliography[title={Referencias}]
+\addcontentsline{toc}{section}{Referencias}
 \end{document}
