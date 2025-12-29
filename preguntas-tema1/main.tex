@@ -76,52 +76,89 @@ La misma presentación se encuentra en \href[page=1]{../references/intro.pdf}{el
 \begin{figure}[H]
 	\centering
 	\includegraphics[page=3,scale=0.9]{./references/intro.pdf}
-	\caption{Página 3 de la presentación titulada <<Introducción>>, Modelación y Simulación, Semestre 2/2025.}
+	\caption{Página 3 de la presentación titulada ``Introducción'', Modelación y Simulación, Semestre 2/2025.}
 \end{figure}
 
 \section*{Respuestas}
 \subsection*{Introducción}
 \begin{enumerate}
-	\item La simulación se refiere a un gran conjunto de métodos y aplicaciones
+	\item \textbf{La simulación y por qué es una herramienta útil:} La simulación se refiere
+	      a un gran conjunto de métodos y aplicaciones
 	      que buscan imitar el comportamiento de sistemas reales, generalmente por medio de
 	      una computadora con un software apropiado.
 	      Es una herramienta útil en diversas disciplinas ya que, al ser independiente del dominio del problema, es posible
 	      recrear situaciones o resultados tanto físicos como teóricos, teniendo su aplicación en sectores como ser la aeronáutica, procesos industriales, etc.
 	      \citetitle[p.~2]{garcia2013simpromodel}
-	\item Su propósito es crear una representación simplificada y abstracta de un problema real.
-	\item En un modelo determinista, las relaciones entre los cambios de las variables del modelo son constantes. En cambio, en un modelo estocástico, los cambios en las variables suelen seguir algún modelo probabilístico donde el resultado después de un evento no siempre es el mismo. \citetitle[p.~3]{garcia2013simpromodel}
-	\item Los tipos más comunes de simulación que existen son:
+
+	\item \textbf{El propósito principal del modelaje en el contexto de la simulación:} Su propósito
+	      es crear una representación simplificada y abstracta de un problema real.
+
+	\item \textbf{Diferencia entre un modelo determinista y un modelo estocástico:} En un modelo
+	      determinista, las relaciones entre los cambios de las variables del modelo son constantes.
+	      En cambio, en un modelo estocástico, los cambios en las variables suelen
+	      seguir algún modelo probabilístico donde el resultado
+	      después de un evento no siempre es el mismo. \citetitle[p.~3]{garcia2013simpromodel}
+
+	\item \textbf{Los tipos más comunes de simulación que existen, y las situaciones que se utilizan son:}
 	      \begin{itemize}
 		      \item \textbf{Simulación Continua}: Modela sistemas en los que los cambios ocurren continuamente a lo largo del tiempo (ej. modelos de crecimiento poblacional).
 		      \item \textbf{Simulación de Eventos Discretos}: Modela sistemas en los que los cambios ocurren en puntos específicos en el tiempo (ej. sistemas de colas).
-		      \item \small{\textbf{Simulación Basada en Agentes}: Modela sistemas donde múltiples entidades autónomas (agentes) interactúan entre sí (ej. mercados económicos, comportamiento social).}
+		      \item \small{\textbf{Simulación Basada en Agentes}: Modela sistemas donde múltiples entidades autónomas
+			            (agentes) interactúan entre sí (ej. mercados económicos, comportamiento social).}
 	      \end{itemize}\citetitle[p.~2]{machuca2025modysimtema1}
 \end{enumerate}
 \subsection*{Terminología Básica}
 \begin{enumerate}
-	\item Un modelo es una representación o abstracción de una situación real, el cual puede ser de varios tipos. Se diferencia de un sistema real en la medida que el objeto del modelo es poder comprender, predecir y controlar el comportamiento de un sistema dado.
-	\item Definiciones:
+	\item \textbf{Qué es un modelo y cómo se diferencia de un sistema real:} Un modelo es una representación
+	      o abstracción de una situación real, el cual puede ser de varios tipos.
+	      Se diferencia de un sistema real en la medida que el objeto del modelo
+	      es poder comprender, predecir y controlar el comportamiento de un sistema dado.
+
+	\item \textbf{Definiciones de ``entidad'', ``atributo'', y ``evento'':}
 	      \begin{itemize}
-		      \item \textbf{Entidad:} Por lo general es \textit{la representación de los flujos de entrada y salida en un sistema;} al entrar a un sistema una entidad es el elemento responsable de que el estado del sistema cambie. \citetitle[p.~4]{garcia2013simpromodel}
+		      \item \textbf{Entidad:} Por lo general es \textit{la representación de los flujos de entrada
+			            y salida en un sistema;} al entrar a un sistema una entidad es el elemento responsable
+		            de que el estado del sistema cambie. \citetitle[p.~4]{garcia2013simpromodel}
+
 		      \item \textbf{Atributo:} Es una \textit{característica de una entidad}. Son muy útiles
 		            para diferenciar entidades sin necesidad de generar una nueva, y pueden adjudicarse al
 		            momento de la creación de la entidad, asignarse o cambiarse durante el proceso. \citetitle[p.~6]{garcia2013simpromodel}
-		      \item \textbf{Evento:} Es un \textit{cambio en el estado actual del sistema.} Existen dos tipos principales de eventos: \begin{itemize}
+
+		      \item \textbf{Evento:} Es un \textit{cambio en el estado actual del sistema.}
+		            Existen dos tipos principales de eventos:
+		            \begin{itemize}
 			            \item \textbf{Eventos actuales:} Aquellos que están sucediendo en el sistema en un momento dado.
 			            \item \textbf{Eventos futuros:} Cambios que
 			                  se presentarán en el sistema después del tiempo de simulación, de acuerdo con una pro­
 			                  gramación específica.
 		            \end{itemize} \citetitle[p.~4]{garcia2013simpromodel}
 	      \end{itemize}
-	\item \begin{itemize}
-		      \item \textbf{Verificación:} Proceso en el cual, una vez identificadas las distribuciones de probabilidad de las variables del modelo y se han implantado los supuestos acordados, se comprueba la propiedad de la programación del modelo, asegurándonos de que todos los parámetros en la simulación funcionen correctamente. \citetitle[p.~13]{garcia2013simpromodel}
-		      \item \textbf{Validación:} Proceso que consiste en pruebas simultáneas con información de entrada real para observar su comportamiento y analizar sus resultados. \citetitle[p.~14]{garcia2013simpromodel}
+
+	\item \textbf{Significados de Verificación y Validación de un modelo de simulación:}
+
+	      \begin{itemize}
+		      \item \textbf{Verificación:} Proceso en el cual, una vez identificadas
+		            las distribuciones de probabilidad de las variables del modelo y se han
+		            implantado los supuestos acordados, se comprueba la propiedad de la
+		            programación del modelo, asegurándonos de que todos los parámetros en la
+		            simulación funcionen correctamente. \citetitle[p.~13]{garcia2013simpromodel}
+
+		      \item \textbf{Validación:} Proceso que consiste en pruebas simultáneas
+		            con información de entrada real para observar su comportamiento y
+		            analizar sus resultados. \citetitle[p.~14]{garcia2013simpromodel}
 	      \end{itemize}
-	\item Se define como el \textit{periodo que se modela}, que puede ser diferente del tiempo real. \citetitle[p.~4]{machuca2025modysimtema1}
+
+	\item \textbf{Definición del tiempo de simulación y cómo se utiliza:} \\Se define como
+	      el \textit{periodo que se modela}, que puede ser diferente del tiempo real.
+	      \citetitle[p.~4]{machuca2025modysimtema1}
+
+	      Se utiliza durante la parametrización de la simulación, antes de ejecutar la corrida.
+	      En el contexto del software \textbf{ProModel}, se introduce en el campo \textbf{``Run hours''}
+	      dentro del comando \textbf{``Options''}, en el menú \textbf{``Simulation''}. \citetitle[p.~162]{garcia2013simpromodel}
 \end{enumerate}
 \subsection*{Conceptos Fundamentales de Simulación}
 \begin{enumerate}[label*=\arabic*.]
-	\item Los pasos principales en el proceso de desarrollo de un modelo de simulación son:
+	\item \textbf{Los pasos principales en el proceso de desarrollo de un modelo de simulación son:}
 	      \begin{enumerate}[label*=\arabic*.]
 		      \item \textbf{Definición del sistema bajo estudio:} En esta etapa es necesario conocer el sistema a modelar.
 		            Para ello se requiere saber qué origina el estudio de simulación y establecer los supuestos del modelo: es conveniente definir con claridad
