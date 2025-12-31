@@ -17,7 +17,7 @@
   if i < arr.len() and arr.at(i) != none { arr.at(i) } else { filler }
 }
 
-// Build the row-major cell list for your 9-column system table.
+// Build the row-major cell list for 9-column system table.
 #let mk_system_cells(
   entities: (),
   events_now: (),
@@ -46,16 +46,19 @@
 
   let cells = ()
   for i in range(n) {
-    cells = cells + (
-      pick(entities, i, filler: filler),
-      pick(events_now, i, filler: filler),
-      pick(events_future, i, filler: filler),
-      pick(states, i, filler: filler),
-      pick(locations, i, filler: filler),
-      pick(resources, i, filler: filler),
-      pick(attributes, i, filler: filler),
-      pick(vars_cont, i, filler: filler),
-      pick(vars_disc, i, filler: filler),
+    cells = (
+      cells
+        + (
+          pick(entities, i, filler: filler),
+          pick(events_now, i, filler: filler),
+          pick(events_future, i, filler: filler),
+          pick(states, i, filler: filler),
+          pick(locations, i, filler: filler),
+          pick(resources, i, filler: filler),
+          pick(attributes, i, filler: filler),
+          pick(vars_cont, i, filler: filler),
+          pick(vars_disc, i, filler: filler),
+        )
     )
   }
   cells
@@ -69,10 +72,10 @@
   header_cell("Recursos", rowspan: 2),
   header_cell("Atributos", rowspan: 2),
   header_cell("Variables", colspan: 2),
-
-  // 2nd header row
+  // Events subheaders
   header_cell("Actuales"),
   header_cell("Futuros"),
+  // Variables subheaders
   header_cell("Continuas"),
   header_cell("Discretas"),
 )
@@ -153,7 +156,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
       vars_cont: hospital_vars_cont,
       vars_disc: hospital_vars_disc,
       min_rows: 6, // because states has 6 entries
-    )
+    ),
   )
 ]
 
@@ -182,7 +185,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
       vars_cont: bank_vars_cont,
       vars_disc: bank_vars_disc,
       min_rows: 6,
-    )
+    ),
   )
 ]
 
