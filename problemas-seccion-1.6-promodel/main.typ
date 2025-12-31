@@ -14,22 +14,20 @@
   table.cell(rowspan: 2, alignedboldcell("Recursos")),
   table.cell(rowspan: 2, alignedboldcell("Atributos")),
   table.cell(colspan: 2, alignedboldcell("Variables")),
-
-  // División de Eventos
+  // 2nd header row
   alignedboldcell("Actuales"),
   alignedboldcell("Futuros"),
-  // División de Variables
   alignedboldcell("Continuas"),
   alignedboldcell("Discretas"),
 )
 
 #let system_table(..cells) = {
-  set text(size: 6pt, hyphenate: false)
+  set text(size: 8pt, hyphenate: false)
 
   table(
-    columns: 9,
-    column-gutter: 8pt,
-    inset: (x: 2pt, y: 4pt),
+    columns: (4.7fr, 4.3fr, 4.1fr, 4.6fr, 6.9fr, 5.5fr, 4.6fr, 5.9fr, 3.7fr),
+    column-gutter: 3pt,
+    inset: (x: 4pt, y: 3pt),
     ..system_headers,
     ..cells,
   )
@@ -63,10 +61,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 
 == La sala de emergencia de un hospital
 
-\
-\
-
-#scale(x: 120%, y: 120%)[
+#scale(x: 90%, y: 90%)[
 
 
   #system_table(
@@ -132,10 +127,10 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
   )
 ]
 
-\
-\
-== Un banco mercantil
-// poner tabla
+
+
+== otra
+dsadas
 
 
 #pagebreak()
