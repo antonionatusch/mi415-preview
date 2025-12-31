@@ -3,6 +3,7 @@
 #import "system-tables/phoneline.typ": phoneline_system_table
 #import "system-tables/hotel.typ": hotel_system_table
 #set heading(numbering: "1.a)")
+#set text(lang: "es")
 
 #show heading.where(level: 1): set text(size: 12pt)
 #show heading.where(level: 2): set text(size: 10pt)
