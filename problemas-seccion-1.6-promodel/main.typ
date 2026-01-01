@@ -53,7 +53,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 
 == Un hospital
 
-//#hospital_system_table
+#hospital_system_table()
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
