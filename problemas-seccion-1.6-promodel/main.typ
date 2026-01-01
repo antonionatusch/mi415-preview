@@ -29,7 +29,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 
 == La sala de emergencia de un hospital
 
-#hospital_system_table()
+#er_room_system_table()
 
 == Un banco mercantil
 
@@ -50,6 +50,10 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 == El proceso de pintura de un automóvil
 
 #car_painting_system_table()
+
+== Un hospital
+
+//#hospital_system_table
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")

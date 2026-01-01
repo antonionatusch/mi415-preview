@@ -1,4 +1,4 @@
-#import "system-tables/er-room.typ": hospital_system_table
+#import "system-tables/er-room.typ": er_room_system_table
 #import "system-tables/bank.typ": bank_system_table
 #import "system-tables/phoneline.typ": phoneline_system_table
 #import "system-tables/hotel.typ": hotel_system_table
