@@ -55,5 +55,9 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 
 #hospital_system_table()
 
+== Un sistema de respuesta en caso de emergencias
+
+#emergency_answer_system_table()
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
