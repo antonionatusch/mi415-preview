@@ -79,8 +79,24 @@
     "Tamaño de la habitación",
     "Tamaño del consultorio",
   )
-  let hospital_vars_cont = ("Tiempo promedio por consulta, operación, atención", "")
-  let hospital_vars_disc = ()
+  let hospital_vars_cont = (
+    "Tiempo promedio por consulta, operación, atención",
+    "Tiempo promedio de espera",
+    "Edad promedio de los pacientes",
+    "Número promedio de pacientes atendidos por día",
+    "Número promedio de pacientes dados de alta por día",
+    "Cantidad promedio de medicamentos utilizados por día",
+    "Costo promedio por paciente atendido",
+    "Costo promedio de operación",
+    "Costo promedio de medicamentos por paciente",
+  )
+  let hospital_vars_disc = (
+    "Pacientes atendidos en un día",
+    "Consultas realizadas",
+    "Operaciones realizadas",
+    "Ventas de medicamentos realizadas en un día",
+    "Número de pacientes dados de alta",
+  )
 
   scale(x: 90%, y: 90%)[
     #system_table(
