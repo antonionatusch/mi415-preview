@@ -82,8 +82,11 @@ Lo que da como resultado la siguiente tabla de promedios móviles:
 Graficando, tenemos lo siguiente:
 
 #align(center)[
-  #image("./scripts/problem-9/moving_average_plot.png", width: 90%)
+  #image("./scripts/problem-9/moving_average_plot.png", width: 110%)
 ]
+
+Se puede observar que la gráfica llega a un estado estable alrededor del valor de $0.5$,
+y se puede considerar que el inicio del estado estable es a partir del valor número $n approx 25$.
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
