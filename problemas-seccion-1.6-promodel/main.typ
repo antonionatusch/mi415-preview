@@ -78,6 +78,12 @@ $r_10 = 1/10 limits(sum)_(i=1)^n r_i$
 Lo que da como resultado la siguiente tabla de promedios móviles:
 
 #problem_9_moving_avg_table(window: 10)
+\
+Graficando, tenemos lo siguiente:
+
+#align(center)[
+  #image("./scripts/problem-9/moving_average_plot.png", width: 90%)
+]
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
