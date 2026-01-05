@@ -59,5 +59,16 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 
 #emergency_answer_system_table()
 
+#heading([
+  Determine el promedio móvil de los números de la siguiente tabla y grafique los promedios.
+  ¿Llega a estado estable la gráfica?
+  En caso afirmativo, ¿a partir de qué valor se puede considerar el inicio del estado estable?
+])
+
+// Tabla
+
+\
+$"Promedio móvil:" r_n = 1/n limits(sum)_(i=1)^n r_i "para" n = 1,2,dots,100$
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
