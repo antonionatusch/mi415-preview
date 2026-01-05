@@ -6,4 +6,4 @@
 #import "system-tables/car-painting.typ": car_painting_system_table
 #import "system-tables/hospital.typ": hospital_system_table
 #import "system-tables/emergency.typ": emergency_answer_system_table
-#import "problem-tables-numbers/problem-9.typ": problem_9_numbers_table
+#import "problem-tables-numbers/problem-9.typ": *

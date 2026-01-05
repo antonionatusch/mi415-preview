@@ -71,5 +71,13 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 \
 $"Promedio móvil:" r_n = 1/n limits(sum)_(i=1)^n r_i "para" n = 1,2,dots,100$
 
+Para $n = 10$ dado que tenemos 10 datos, el promedio móvil se calcula como:
+
+$r_10 = 1/10 limits(sum)_(i=1)^n r_i$
+
+Lo que da como resultado la siguiente tabla de promedios móviles:
+
+#problem_9_moving_avg_table(window: 10)
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
