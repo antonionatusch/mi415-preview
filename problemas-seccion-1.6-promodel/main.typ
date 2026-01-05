@@ -65,7 +65,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
   En caso afirmativo, ¿a partir de qué valor se puede considerar el inicio del estado estable?
 ])
 
-// Tabla
+#problem_9_numbers_table()
 
 \
 $"Promedio móvil:" r_n = 1/n limits(sum)_(i=1)^n r_i "para" n = 1,2,dots,100$
