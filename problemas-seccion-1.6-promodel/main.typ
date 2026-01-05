@@ -65,6 +65,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
   En caso afirmativo, ¿a partir de qué valor se puede considerar el inicio del estado estable?
 ])
 
+\
 #problem_9_numbers_table()
 
 \
