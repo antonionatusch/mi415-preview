@@ -7,3 +7,4 @@
 #import "system-tables/hospital.typ": hospital_system_table
 #import "system-tables/emergency.typ": emergency_answer_system_table
 #import "problem-tables-numbers/problem-9.typ": *
+#import "problem-tables-numbers/problem-10.typ": *

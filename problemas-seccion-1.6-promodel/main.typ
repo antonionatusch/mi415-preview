@@ -73,7 +73,7 @@ $"Promedio móvil:" r_n = 1/n limits(sum)_(i=1)^n r_i "para" n = 1,2,dots,100$
 
 Para $n = 10$ dado que tenemos 10 datos, el promedio móvil se calcula como:
 
-$r_10 = 1/10 limits(sum)_(i=1)^n r_i$
+$r_10 = 1/10 limits(sum)_(i=1)^10 r_i$
 
 Lo que da como resultado la siguiente tabla de promedios móviles:
 
@@ -87,6 +87,37 @@ Graficando, tenemos lo siguiente:
 
 Se puede observar que la gráfica llega a un estado estable alrededor del valor de $0.5$,
 y se puede considerar que el inicio del estado estable es a partir del valor número $n approx 25$.
+
+#pagebreak()
+#heading([
+  Problema 10. Determine el promedio móvil de los números de la siguiente tabla y grafique los promedios.
+  ¿Llega a estado estable la gráfica?
+  En caso afirmativo, ¿a partir de qué valor se puede considerar el inicio del estado estable?
+])
+
+\
+#problem_10_numbers_table()
+
+\
+$"Promedio móvil:" r_n = 1/n limits(sum)_(i=1)^n r_i "para" n = 1,2,dots,100$
+
+Para $n = 15$ dado que tenemos 15 datos, el promedio móvil se calcula como:
+
+$r_15 = 1/15 limits(sum)_(i=1)^15 r_i$
+
+Lo que da como resultado la siguiente tabla de promedios móviles:
+
+#problem_10_moving_avg_table(window: 15)
+\
+#pagebreak()
+Graficando, tenemos lo siguiente:
+
+#align(center)[
+  #image("./scripts/problem-10/moving_average_plot.png", width: 110%)
+]
+
+Se puede observar que la gráfica llega a un estado estable alrededor del valor de $0.5$,
+y se puede considerar que el inicio del estado estable es a partir del valor número $n approx 40$.
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
