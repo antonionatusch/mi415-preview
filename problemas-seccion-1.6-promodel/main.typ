@@ -119,5 +119,17 @@ Graficando, tenemos lo siguiente:
 Se puede observar que la gráfica llega a un estado estable alrededor del valor de $0.5$,
 y se puede considerar que el inicio del estado estable es a partir del valor número $n approx 40$.
 
+#heading([
+  Genere en una hoja de cálculo 100 números con la función $x_i = -3 ln(1-r_i)$; donde $r_i$ es
+  un número pseudoaleatorio entre cero y uno, obtenido a partir de la función
+  ALEATORIO de la hoja de cálculo. Suponga que estos valores son tiempos de proceso
+  de cierta pieza. Determine un promedio móvil de estos valores conforme se va realizando el procesamiento
+  de las piezas, y grafique ese promedio. ¿El tiempo promedio
+  de proceso es estable? ¿Y si en lugar de 100 se generan 200 números? {Sugerencia:
+  Para evitar que se recalculen los números aleatorios es necesario copiarlos y pegarlos
+  mediante pegado especial de sólo valores).
+
+])
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
