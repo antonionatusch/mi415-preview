@@ -131,5 +131,18 @@ y se puede considerar que el inicio del estado estable es a partir del valor nú
 
 ])
 
+Números generados por la función *ALEATORIO* de la hoja de cálculo:
+\
+#problem_11_original_numbers_table()
+
+#pagebreak()
+Números transformados por la función $x_i = -3 ln(1-r_i)$:
+
+#problem_11_new_random_numbers_table()
+
+Promedio móvil con ventana de 10:
+\
+#problem_11_moving_avg_table(window: 10)
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
