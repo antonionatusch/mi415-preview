@@ -60,7 +60,7 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~16--19]),
 #emergency_answer_system_table()
 
 #heading([
-  Determine el promedio móvil de los números de la siguiente tabla y grafique los promedios.
+  Problema 9. Determine el promedio móvil de los números de la siguiente tabla y grafique los promedios.
   ¿Llega a estado estable la gráfica?
   En caso afirmativo, ¿a partir de qué valor se puede considerar el inicio del estado estable?
 ])
