@@ -82,7 +82,7 @@ Lo que da como resultado la siguiente tabla de promedios móviles:
 Graficando, tenemos lo siguiente:
 
 #align(center)[
-  #image("./scripts/problem-9/moving_average_plot.png", width: 110%)
+  #image("./plots/problem-9/moving_average_plot.png", width: 110%)
 ]
 
 Se puede observar que la gráfica llega a un estado estable alrededor del valor de $0.5$,
@@ -113,7 +113,7 @@ Lo que da como resultado la siguiente tabla de promedios móviles:
 Graficando, tenemos lo siguiente:
 
 #align(center)[
-  #image("./scripts/problem-10/moving_average_plot.png", width: 110%)
+  #image("./plots/problem-10/moving_average_plot.png", width: 110%)
 ]
 
 Se puede observar que la gráfica llega a un estado estable alrededor del valor de $0.5$,
@@ -124,7 +124,7 @@ y se puede considerar que el inicio del estado estable es a partir del valor nú
   un número pseudoaleatorio entre cero y uno, obtenido a partir de la función
   ALEATORIO de la hoja de cálculo. Suponga que estos valores son tiempos de proceso
   de cierta pieza. Determine un promedio móvil de estos valores conforme se va realizando el procesamiento
-  de las piezas, y grafique ese promedio. ¿El tiempo promedio
+  de las piezas, y grafique ese promedio ¿El tiempo promedio
   de proceso es estable? ¿Y si en lugar de 100 se generan 200 números? {Sugerencia:
   Para evitar que se recalculen los números aleatorios es necesario copiarlos y pegarlos
   mediante pegado especial de sólo valores).
