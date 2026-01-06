@@ -1,16 +1,63 @@
 # Load csv
 import pandas as pd
 import matplotlib.pyplot as plt
+import argparse
 
-# Load data
-data = pd.read_csv("../../data/problem_10_data.csv", header=None)
+# Load data from csv path established by CLI args
+parser = argparse.ArgumentParser(
+    description="Plot moving average and original values of a specified column from a CSV file."
+)
+parser.add_argument(
+    "csv_path", type=str, help="Path to the CSV file containing the data."
+)
+parser.add_argument(
+    "--column_index",
+    type=int,
+    default=0,
+    help="Index of the column to process (default: 0).",
+)
+parser.add_argument(
+    "--output_path",
+    type=str,
+    default="moving_average_plot.png",
+    help="Path to save the output plot (default: moving_average_plot.png).",
+)
 
-# Convert to dataframe to then calculate moving average with n = 10
-df = pd.DataFrame(data)
+parser.add_argument(
+    "--with_header",
+    action="store_true",
+    help="Specify if the CSV file has a header row.",
+)
+
+args = parser.parse_args()
+csv_path = args.csv_path
+column_index = args.column_index
+output_path = args.output_path
+with_header = args.with_header
+
+# Error handling if user forgets to specify header when csv has one
+
+try:
+    pd.read_csv(csv_path, header=0)
+    csv_has_header = True
+except pd.errors.ParserError:
+    csv_has_header = False
+if with_header != csv_has_header:
+    raise ValueError(
+        f"Header mismatch: CSV has header = {csv_has_header}, but with_header argument is {with_header} or not provided."
+    )
+
+
+has_header = 1 if with_header else None
+
+values = pd.read_csv(csv_path, header=has_header).iloc[:, column_index].tolist()
+
+# Create DataFrame
+df = pd.DataFrame(values)
 df.columns = ["values"]
-window_size = 15
+window_size = 10
 df["moving_average"] = df["values"].rolling(window=window_size).mean()
-# Just to check if it gets same values as Typst
+
 # print(df["moving_average"].head(25))
 
 # Plot original data overlapped by moving average with line plot with markers
@@ -37,4 +84,4 @@ plt.ylabel("Valores")
 plt.legend()
 plt.grid()
 # Save plot
-plt.savefig("moving_average_plot.png")
+plt.savefig(output_path)

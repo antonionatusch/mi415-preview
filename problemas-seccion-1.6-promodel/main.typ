@@ -119,6 +119,7 @@ Graficando, tenemos lo siguiente:
 Se puede observar que la gráfica llega a un estado estable alrededor del valor de $0.5$,
 y se puede considerar que el inicio del estado estable es a partir del valor número $n approx 40$.
 
+#pagebreak()
 #heading([
   Genere en una hoja de cálculo 100 números con la función $x_i = -3 ln(1-r_i)$; donde $r_i$ es
   un número pseudoaleatorio entre cero y uno, obtenido a partir de la función
@@ -133,16 +134,24 @@ y se puede considerar que el inicio del estado estable es a partir del valor nú
 
 Números generados por la función *ALEATORIO* de la hoja de cálculo:
 \
-#problem_11_original_numbers_table()
+#problem_11_100_values_original_numbers_table()
 
 #pagebreak()
 Números transformados por la función $x_i = -3 ln(1-r_i)$:
 
-#problem_11_new_random_numbers_table()
+#problem_11_100_values_new_random_numbers_table()
 
 Promedio móvil con ventana de 10:
 \
-#problem_11_moving_avg_table(window: 10)
+#problem_11_100_values_moving_avg_table(window: 10)
+
+Graficando, tenemos lo siguiente:
+#align(center)[
+  #image("./plots/problem-11/moving_average_plot_100.png", width: 90%)
+]
+
+Se puede observar que el tiempo promedio del proceso *no es estable*.
+Al extender el número de datos a 200, se obtiene la siguiente gráfica:
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
