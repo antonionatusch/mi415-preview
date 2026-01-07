@@ -10,6 +10,11 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     "csv_path", type=str, help="Path to the CSV file containing the data."
 )
+
+parser.add_argument(
+    "--window_size", type=str, help="Window size for the moving average (default: 10)"
+)
+
 parser.add_argument(
     "--column_index",
     type=int,
@@ -34,6 +39,7 @@ csv_path = args.csv_path
 column_index = args.column_index
 output_path = args.output_path
 with_header = args.with_header
+window_size = int(args.window_size) if args.window_size else 10
 
 # Error handling if user forgets to specify header when csv has one
 
@@ -55,7 +61,6 @@ values = pd.read_csv(csv_path, header=has_header).iloc[:, column_index].tolist()
 # Create DataFrame
 df = pd.DataFrame(values)
 df.columns = ["values"]
-window_size = 10
 df["moving_average"] = df["values"].rolling(window=window_size).mean()
 
 # print(df["moving_average"].head(25))

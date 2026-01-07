@@ -157,5 +157,20 @@ Al extender el número de datos a 200:
 Números generados por la función *ALEATORIO* de la hoja de cálculo:
 #problem_11_200_values_original_numbers_table()
 
+Números transformados por la función $x_i = -3 ln(1-r_i)$:
+#problem_11_200_values_new_random_numbers_table()
+
+#pagebreak()
+Promedio móvil con ventana de 20:
+#problem_11_200_values_moving_avg_table(window: 20)
+
+Graficando, tenemos lo siguiente:
+#align(center)[
+  #image("./plots/problem-11/moving_average_plot_200.png", width: 90%)
+]
+
+Se puede observar que, en este caso, el tiempo promedio del proceso *sí es estable,*
+donde llega a un estado estable alrededor del valor de $3$, con un $n approx 25$
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
