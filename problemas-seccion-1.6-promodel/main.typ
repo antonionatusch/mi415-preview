@@ -151,7 +151,11 @@ Graficando, tenemos lo siguiente:
 ]
 
 Se puede observar que el tiempo promedio del proceso *no es estable*.
-Al extender el número de datos a 200, se obtiene la siguiente gráfica:
+Al extender el número de datos a 200:
+
+#pagebreak()
+Números generados por la función *ALEATORIO* de la hoja de cálculo:
+#problem_11_200_values_original_numbers_table()
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
