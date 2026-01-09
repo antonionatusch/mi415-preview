@@ -203,7 +203,7 @@ $
 
 #cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~27])
 
-*Ejemplo*
+*Ejemplo 1*
 
 Generar $4$ números entre $0$ y $1$ con los siguientes parámetros: $X_0 = 37, a = 19, c = 33$ y \
 $m = 100$.
@@ -233,8 +233,72 @@ $quad c$ relativamente primo a $m$ \
 $quad g$ debe ser entero \
 
 Bajo estas condiciones se obtiene un periodo de vida máximo: $N = m = 2^g$.
-#cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~27])
-*Otro ejemplo*
 
+*Ejemplo 2*
+Generar suficientes números entre 0 y 1 con los parámetros $X_0 = 6, k = 3, g = 3, "y" c = 7$, \
+hasta encontrar el periodo de vida máximo $(N)$.
+
+Como podemos ver, si se cumplen las condiciones que Banks, Carson, Nelson y Nicol \
+sugieren, se logrará el periodo máximo $N = m = 8$. A continuación se presente el desarrollo \
+de la generación de los números $r_(i^*)$
+
+$ a = 1 + 4 (3) = 13 "y" m = 2^3 = 8 $
+\
+$ X_0 = 6 $
+
+#tabular_layout_table(
+  $X_1 = (13*6 + 7) mod 8 = 5$,
+  $r_1 = 5/7 = 0.714$,
+  $X_2 = (13*5 + 7) mod 8 = 0$,
+  $r_2 = 0/7 = 0.000$,
+  $X_3 = (13*0 + 7) mod 8 = 7$,
+  $r_3 = 7/7 = 1.000$,
+  $X_4 = (13*7 + 7) mod 8 = 2$,
+  $r_4 = 2/7 = 0.285$,
+  $X_5 = (13*2 + 7) mod 8 = 1$,
+  $r_5 = 1/7 = 0.142$,
+  $X_6 = (13*1 + 7) mod 8 = 4$,
+  $r_6 = 4/7 = 0.571$,
+  $X_7 = (13*4 + 7) mod 8 = 3$,
+  $r_7 = 3/7 = 0.428$,
+  $X_8 = (13*3 + 7) mod 8 = 6$,
+  $r_8 = 6/7 = 0.857$,
+  column_number: 2,
+)
+
+Es importante mencionar que el número generado en $X_8 = 6$ es exactamente igual a la semilla \
+$X_0$, y si continuáramos generando más números, éstos se repetirían. Además, \
+sabemos que el algoritmo congruencial lineal genera una secuencia de números enteros \
+$S = (0, 1, 2, 3, dots, m - 1)$. Observe que en este caso de genera la secuencia $S$ \
+$= (0, 1, 2, 3, 4, 5, 6, 7)$, es decir, se generan todos los números enteros \
+
+*Ejemplo 3*
+Consideremos de nuevo el ejemplo anterior, pero tratemos de infringir de manera arbitraria
+alguna de las condiciones. Supongamos que $a = 12$; se sabe que $a$ no es el resultado \
+de $1 + 4k$, donde $k$ es un entero. Veamos el comportamiento del algoritmo congruencial \
+lineal ante tal cambio.
+
+_Solución:_
+
+$ a = 1 + 4 (3) = 13 "y" m = 2^3 = 8 $
+\
+$ X_0 = 6 $
+
+#tabular_layout_table(
+  $X_1 = (12*6 + 7) mod 8 = 7$,
+  $r_1 = 7/7 = 1.000$,
+  $X_2 = (12*7 + 7) mod 8 = 3$,
+  $r_2 = 3/7 = 0.428$,
+  $X_3 = (12*3 + 7) mod 8 = 3$,
+  $r_3 = 3/7 = 0.428$,
+  column_number: 2,
+)
+
+El periodo de vida en este caso es $N = 2$, de manera que, como puede ver, el periodo de \
+vida máximo no se logra. Como conclusión tenemos que si no se cumple alguna de las \
+condiciones, el periodo de vida máximo $N = m$ no se garantiza, por lo que el periodo de \
+vida será menor que $m$.
+
+#cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~27--28])
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
