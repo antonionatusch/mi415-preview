@@ -1,13 +1,13 @@
-#let tabular_layout_table(..body) = {
+#let tabular_layout_table(..body, column_number: 3) = {
   let pad = (x: 6pt, y: 1pt)
 
   align(center)[
     #table(
-      columns: (auto, auto, auto),
-      align: (left, left, left),
+      columns: column_number,
+      align: left,
       inset: pad,
       column-gutter: 18pt,
-      row-gutter: 2pt,
+      row-gutter: 8pt,
       stroke: none,
       ..body
     )

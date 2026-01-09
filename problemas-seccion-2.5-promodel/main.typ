@@ -83,7 +83,7 @@ _Solución:_
 )
 
 El algoritmo de cuadrados medios generalmente es incapaz de generar una secuencia de \
-r_i con periodo de vida $n$ grande. Además, en ocasiones sólo es capaz de generar un  \
+$r_i$ con periodo de vida $n$ grande. Además, en ocasiones sólo es capaz de generar un  \
 número, por ejemplo, si $X_0 = 1000$, entonces $X_1 = 0000; r_i = 0.0000$ y se dice que \
 el algoritmo se degenera con la semilla de $X_0 = 1000$.
 #cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~25])
@@ -113,6 +113,7 @@ producto medios.
 izquierda del número $Y_i$.
 #cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~25])
 
+#pagebreak()
 *Ejemplo*
 
 Generar los primeros $5$ números $r_i$ a partir de las semillas $X_0 = 5015 "y" X_1 = 5374$; observe \
@@ -177,6 +178,63 @@ _Solución:_
   $X_5 = 4311$,
   $r_5 = 0.4311$,
 )
+#cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~26])
 
+#pagebreak()
+=== Algoritmo lineal
+Este algoritmo congruencial fue propuesto por Lehmer en 1951. Según Law y \
+Kelton, no ha sido el más usado. El algoritmo congruencial lineal genera una secuencia \
+de números enteros por medio de la siguiente ecuación recursiva:
 
+$
+  X_i + 1 = (a x_i + c) mod (m) quad i = 0, 1, 2, 3, dots, n
+$
+
+donde $X_0$ es la semilla, $a$ es la constante multiplicativa, $c$ es una constante aditiva, y $m$
+es el módulo. $X_0 > 0, a > 0, c > 0, "y" m > 0$ deben ser números enteros. La operación "$mod (m)$" \
+significa multiplicar $X_i$ por $a$, sumar $c$, y dividir el resultado entre $m$ para obtener el residuo \
+$X_(i+1)$. Es importante señalar que la ecuación recursiva del algoritmo congruencial lineal \
+genera una secuencia de números enteros $S = (0, 1, 2, 3, dots, m - 1)$, y que para obtener \
+números pseudoaleatorios en el intervalo $(0, 1)$ se requiere la siguiente ecuación:
+
+$
+  r_i = X_i / (m-1) quad i = 0, 1, 2, 3, dots, n
+$
+
+#cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~27])
+
+*Ejemplo*
+
+Generar $4$ números entre $0$ y $1$ con los siguientes parámetros: $X_0 = 37, a = 19, c = 33$ y \
+$m = 100$.
+
+_Solución:_
+
+#tabular_layout_table(
+  $X_1 = (19 ast 37 + 33) mod 100 = 36$,
+  $r_1 = 36/99 = 0.3636$,
+  $X_2 = (19 ast 36 + 33) mod 100 = 17$,
+  $r_2 = 17/99 = 0.1717$,
+  $X_3 = (19 ast 17 + 33) mod 100 = 56$,
+  $r_3 = 56/99 = 0.5656$,
+  $X_4 = (19 ast 56 + 33) mod 100 = 97$,
+  $r_4 = 97/99 = 0.9797$,
+  column_number: 2,
+)
+
+En el ejemplo anterior se dieron de manera arbitraria cada uno de los parámetros requeridos:
+$X_0, a, c "y" m$. Sin embargo, para que el algoritmo sea capaz de lograr el máximo periodo
+de vida $N$, es preciso que dichos parámetros cumplan ciertas condiciones. Banks, Carson, Nelson y Nicol sugieren lo siguiente:
+
+$quad m = 2^g$ \
+$quad a = 1 + 4k$ \
+$quad k$ debe ser entero \
+$quad c$ relativamente primo a $m$ \
+$quad g$ debe ser entero \
+
+Bajo estas condiciones se obtiene un periodo de vida máximo: $N = m = 2^g$.
+#cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~27])
+*Otro ejemplo*
+
+#pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
