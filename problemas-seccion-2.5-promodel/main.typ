@@ -371,5 +371,19 @@ En vista de que la semilla $X_0$ se repite, volverán a generarse los mismos nú
 el periodo de vida es $N = 2$.
 #cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~29--30])
 
+=== Algoritmo congruencial aditivo
+Este algoritmo requiere una secuencia previa de $n$ números enteros $X_1, X_2, X_3, X_4, dots, X_n$ \
+para generar una nueva secuencia de números enteros que empieza en $X_(n+1), X_(n+2), X_(n+3), X_(n+4), dots$.
+
+Su ecuación recursiva es:
+
+$ X_i = (X_(i+1) + X_(i-n)) mod (m) quad i = n + 1, n + 2, n + 3, dots N $
+
+Los números $r_i$ pueden ser generados mediante la ecuación:
+
+$ r_i = x_i / (m-1) $
+
+*Ejemplo*
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
