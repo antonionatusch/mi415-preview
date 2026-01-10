@@ -1,0 +1,7 @@
+#let STUDENT_FULL_NAME = "Antonio Miguel Natusch Zarco"
+#let STUDENT_CODE = "2022111958"
+#let COURSE_CODE = "MI415"
+#let COURSE_FULL_NAME = "Modelación y Simulación"
+#let STUDENT_MAJOR_NAME = "Ingeniería de Sistemas"
+#let COURSE_SEMESTER = "Semestre 1/2026"
+#let UPSA_LOGO = "/template/upsa-logo.png"
