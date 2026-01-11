@@ -11,6 +11,16 @@
 
 #pagebreak()
 #counter(page).update(1)
+#set page(
+  header: none,
+  footer: context {
+    align(center)[#counter(page).display("i")]
+  },
+)
+#outline()
+
+#pagebreak()
+#counter(page).update(1)
 #show: setup_page.with(COURSE_CODE, COURSE_SEMESTER, 2, STUDENT_FULL_NAME, STUDENT_CODE)
 
 #text(size: 14pt)[
