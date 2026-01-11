@@ -7,7 +7,15 @@
 #show heading.where(level: 1): set text(size: 14pt)
 #show heading.where(level: 2): set text(size: 12pt)
 
-#cover_page(UPSA_LOGO, STUDENT_FULL_NAME, COURSE_CODE, COURSE_FULL_NAME, STUDENT_CODE, STUDENT_MAJOR_NAME, 2)
+#cover_page(
+  upsa_logo: UPSA_LOGO,
+  student_full_name: STUDENT_FULL_NAME,
+  course_code: COURSE_CODE,
+  course_full_name: COURSE_FULL_NAME,
+  student_code: STUDENT_CODE,
+  student_major_name: STUDENT_MAJOR_NAME,
+  task_number: 2,
+)
 
 #pagebreak()
 #counter(page).update(1)
