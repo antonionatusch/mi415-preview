@@ -10,7 +10,12 @@
 
 #pagebreak()
 #counter(page).update(1)
-#set page(numbering: "i")
+#set page(
+  header: none,
+  footer: context {
+    align(center)[#counter(page).display("i")]
+  },
+)
 #outline()
 
 #pagebreak()
