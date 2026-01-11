@@ -1,4 +1,5 @@
 #import "imports.typ": *
+#import "../template/imports.typ": *
 #set heading(numbering: "1.1)")
 #set text(lang: "es")
 #set list(indent: 1cm)
@@ -6,18 +7,11 @@
 #show heading.where(level: 1): set text(size: 14pt)
 #show heading.where(level: 2): set text(size: 12pt)
 
-#align(center)[
-  #text(size: 24pt)[
-    *Tarea 2 - Modelación y Simulación*
-  ]
+#cover_page(UPSA_LOGO, STUDENT_FULL_NAME, COURSE_CODE, COURSE_FULL_NAME, STUDENT_CODE, STUDENT_MAJOR_NAME, 2)
 
-  #text(size: 18pt)[
-    *Antonio Miguel Natusch Zarco* \
-    *2022111958* \
-    *Ingeniería de Sistemas*
-  ]
-]
-\
+#pagebreak()
+#counter(page).update(1)
+#show: setup_page.with(COURSE_CODE, COURSE_SEMESTER, 2, STUDENT_FULL_NAME, STUDENT_CODE)
 
 #text(size: 14pt)[
   #underline[*Números pseudoaleatorios*]

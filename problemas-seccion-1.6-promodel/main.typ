@@ -1,22 +1,12 @@
 #import "imports.typ": *
+#import "../template/imports.typ": *
 #set heading(numbering: "1.a)")
 #set text(lang: "es")
 
 #show heading.where(level: 1): set text(size: 12pt)
 #show heading.where(level: 2): set text(size: 10pt)
 
-#page(footer: none, numbering: none)[
-  #align(center + horizon)[
-    #text(size: 24pt, weight: "bold")[Tarea 1]
-    #v(1em)
-    #figure(image("figures/upsa-logo.png", width: 70%))
-    #v(1em)
-    #text(
-      size: 18pt,
-      weight: "bold",
-    )[Antonio Miguel Natusch Zarco\ MI415 - Modelación y Simulación \  2022111958 \ Ingeniería de Sistemas]
-  ]
-]
+#cover_page(UPSA_LOGO, STUDENT_FULL_NAME, COURSE_CODE, COURSE_FULL_NAME, STUDENT_CODE, STUDENT_MAJOR_NAME, 1)
 
 #pagebreak()
 #counter(page).update(1)
@@ -25,19 +15,7 @@
 
 #pagebreak()
 #counter(page).update(1)
-#set page(
-  footer: context {
-    [Antonio Miguel Natusch Zarco \ 2022111958]
-    h(1fr)
-    counter(page).display("1")
-  },
-  header: context {
-    [MI415 - Semestre 1/2026]
-    h(1fr)
-    [Tarea 1]
-    line(length: 100%)
-  },
-)
+#show: setup_page.with(COURSE_CODE, COURSE_SEMESTER, 1, STUDENT_FULL_NAME, STUDENT_CODE)
 #text(size: 14pt)[
   #underline[*Identificación de elementos de un sistema*]
 ]
