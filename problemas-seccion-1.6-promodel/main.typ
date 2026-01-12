@@ -28,7 +28,14 @@
 
 #pagebreak()
 #counter(page).update(1)
-#show: setup_page.with(COURSE_CODE, COURSE_SEMESTER, 1, STUDENT_FULL_NAME, STUDENT_CODE)
+#show: setup_page.with(
+  course_code: COURSE_CODE,
+  course_semester: COURSE_SEMESTER,
+  task_number: 2,
+  student_full_name: STUDENT_FULL_NAME,
+  student_code: STUDENT_CODE,
+)
+
 #text(size: 14pt)[
   #underline[*Identificación de elementos de un sistema*]
 ]

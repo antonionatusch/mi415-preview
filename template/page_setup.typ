@@ -1,4 +1,11 @@
-#let setup_page(course_code, course_semester, task_number, student_full_name, student_code, body) = {
+#let setup_page(
+  course_code: str,
+  course_semester: str,
+  task_number: int,
+  student_full_name: str,
+  student_code: str,
+  body,
+) = {
   set page(
     footer: context {
       [#student_full_name \ #student_code]
