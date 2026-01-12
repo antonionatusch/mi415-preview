@@ -97,4 +97,8 @@ anteriormente mencionados garantizan una buena simulación. Son las siguientes:
 #random_numbers_variance
 
 #pagebreak()
+=== Independencia
+#random_numbers_independence
+
+#pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")

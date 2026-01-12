@@ -11,7 +11,7 @@
     Gráficamente, se vería de la siguiente manera:
 
     #figure(image("../figures/figure-2.1-a-b-dist.png", width: 80%), caption: [
-      Figura  extraida del libro #cite(<garcia2013simpromodel>, form: "full", supplement: [p.~32])
+      Figura extraida del libro #cite(<garcia2013simpromodel>, form: "full", supplement: [p.~32])
     ])
 
     \

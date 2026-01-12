@@ -9,3 +9,4 @@
 #import "./congruential-non-linear-algorithms/blum-blum-shub-method.typ" : *
 #import "./random-numbers-properties/random-numbers-average.typ" : *
 #import "./random-numbers-properties/random-numbers-variance.typ" : *
+#import "./random-numbers-properties/random-numbers-independence.typ" : *
