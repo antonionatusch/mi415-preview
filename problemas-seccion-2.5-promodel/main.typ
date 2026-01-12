@@ -476,4 +476,11 @@ al igual que el algoritmo congruencial lineal.
 #cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~31--32])
 
 #pagebreak()
+=== Algoritmo de Blum, Blum y Shub
+Si en el algoritmo congruencial cuadrático $a = 1, b = 0 "y" c = 0$, entonces se construye una nueva ecuación recursiva:
+$ X_(i+1) = (X_i^2) mod (m) quad i = 0, 1, 2, 3, dots, n $
+#cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~32])
+
+
+#pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
