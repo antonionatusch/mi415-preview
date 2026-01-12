@@ -86,6 +86,15 @@ de #cite(<garcia2013simpromodel>, form: "prose", supplement: [p.~52--58]),
 === Algoritmo de Blum, Blum y Shub
 #blum_blum_shub_method
 
+== Propiedades de los números pseudoaleatorios entre 0 y 1
+Conocer las propiedades que deben tener los números pseudoaleatorios provenientes de los métodos
+anteriormente mencionados garantizan una buena simulación. Son las siguientes:
+#cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~32])
+=== Media de los aleatorios entre 0 y 1
+#random_numbers_average
+
+=== Varianza de los números aleatorios
+#random_numbers_variance
 
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")

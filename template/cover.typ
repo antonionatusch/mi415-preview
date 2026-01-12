@@ -11,7 +11,7 @@
     #align(center + horizon)[
       #text(size: 24pt, weight: "bold")[Tarea #task_number]
       #v(1em)
-      #figure(image(upsa_logo, width: 70%))
+      #image(upsa_logo, width: 70%)
       #v(1em)
       #text(
         size: 18pt,
