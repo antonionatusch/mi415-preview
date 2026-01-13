@@ -10,3 +10,4 @@
 #import "./random-numbers-properties/random-numbers-average.typ" : *
 #import "./random-numbers-properties/random-numbers-variance.typ" : *
 #import "./random-numbers-properties/random-numbers-independence.typ" : *
+#import "./random-numbers-tests/random-numbers-mean-test.typ" : *

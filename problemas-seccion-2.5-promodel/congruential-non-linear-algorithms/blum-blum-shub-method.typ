@@ -1,5 +1,3 @@
-#import "../problem-tables-numbers/table-styles.typ": *
-
 #let blum_blum_shub_method = {
   [
     Si en el algoritmo congruencial cuadrático $a = 1, b = 0 "y" c = 0$, entonces se construye una nueva ecuación recursiva:

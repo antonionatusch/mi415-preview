@@ -1,5 +1,3 @@
-#import "../problem-tables-numbers/table-styles.typ": *
-
 #let random_numbers_variance = {
   [
     Si partimos de la misma distribución uniforme continua obtenemos la varianza

@@ -1,5 +1,3 @@
-#import "../problem-tables-numbers/table-styles.typ": *
-
 #let random_numbers_average = {
   [
     En vista de que estos números deben tener la misma probabilidad de presentarse,

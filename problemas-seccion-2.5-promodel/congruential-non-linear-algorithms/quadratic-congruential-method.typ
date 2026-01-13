@@ -1,5 +1,3 @@
-#import "../problem-tables-numbers/table-styles.typ": *
-
 #let quadratic_congruential_method = {
   [
     Este algoritmo tiene la siguiente ecuación recursiva:

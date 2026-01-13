@@ -1,5 +1,3 @@
-#import "../problem-tables-numbers/table-styles.typ": *
-
 #let random_numbers_independence = {
   [
     Esta es una propiedad muy importante, e implica que los números aleatorios no deben

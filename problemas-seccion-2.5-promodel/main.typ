@@ -101,4 +101,12 @@ anteriormente mencionados garantizan una buena simulación. Son las siguientes:
 #random_numbers_independence
 
 #pagebreak()
+== Pruebas estadísticas para los números pseudoaleatorios
+El objetivo principal de estas pruebas es validar que el conjunto $r_i$ realmente está conformado
+por números aleatorios. Hay más pruebas, pero de las que se hablarán son:
+
+=== Prueba de medias
+#random_numbers_mean_test
+
+#pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
