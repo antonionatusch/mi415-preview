@@ -2,7 +2,7 @@
 #let BOOK_PATH = "../../books/libro-02-simulacion-promodel-garcia-garcia-cardenas.pdf"
 #let random_numbers_mean_test = {
   [
-    Una de las propiedades que deben cumplir los números del conjunto "r_i"
+    Una de las propiedades que deben cumplir los números del conjunto $r_i$
     es que el valor esperado sea igual a 0.5.
     La prueba que busca determinar lo anterior es la llamada _prueba de medias,_ en la cual se
     plantean las siguientes hipótesis:
@@ -39,7 +39,7 @@
 
     *Ejemplo*
 
-    Considere los 40 números del conjunto r_i que se presente a continuación,
+    Considere los 40 números del conjunto $r_i$ que se presenta a continuación,
     y determine si tienen un valor esperado de $1/2$ con un nivel de aceptación
     de $95%$
     #example_2_11_values_table()
@@ -58,7 +58,7 @@
 
     _*Nota de autor:* Este valor difiere del valor calculado en el libro
     de $0.43250$ puesto que #cite(<garcia2013simpromodel>, form: "author") mostró
-    los valores redondeados a 4 decimales, mientras que realizó el cálculo
+    los valores de la tabla de datos redondeados a 4 decimales, mientras que realizó el cálculo
     con todos los decimales del número generado. Se utilizará el valor
     calculado en estos apuntes para los cálculos subsiguientes._
 
@@ -80,13 +80,13 @@
     página 332 del libro, de la siguiente manera:
 
     #align(center)[
-      1. *Restar el nivel de confianza dado de 1 para encontrar alfa:* $ alpha = 1 - N C, quad "e.g." alpha = 1 - 0.95 = 0.05 $ \
+      1. *Restar el nivel de confianza dado de 1 para encontrar alfa:* $ alpha = 1 - N C_("dec"), quad "e.g." alpha = 1 - 0.95 = 0.05 $ \
       2. *Dividir entre 2 el resultado:* $ alpha/2 = 0.05/2 = 0.025 $ \
       3. *Buscar* $1 - alpha / 2$ *si la tabla da el área desde la media hacia la derecha o* \
-      $0.5 + alpha / 2$ *si la tabla da el área hacia la izquierda* \
+      $0.5 + alpha / 2$ *si la tabla da el área hacia la izquierda* \ \
       4. *Buscar el valor en la tabla Z* (e.g. $0.9750$) *dentro del cuerpo de la tabla* \ \
       5. *Sumar el valor provisto por la fila y la columna de la celda que contiene ese valor*
-      (e.g. el el valor de Z que contiene la fila donde está el valor de $0.9750$ es $1.90$ y la columna es $0.06$, entonces)
+      (e.g. el valor de Z que contiene la fila donde está el valor de $0.9750$ es $1.90$ y la columna es $0.06$, entonces)
       $ "Valor" z_("fila")(0.9750) = 1.90 \ "Valor" z_("columna")(0.9750) = 0.06 \ "Valor" z_(alpha/2) = 1.90 + 0.06 = 1.96 $.
     ]
   ]
