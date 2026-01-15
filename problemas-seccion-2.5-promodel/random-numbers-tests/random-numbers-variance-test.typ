@@ -1,5 +1,20 @@
 #import "../problem-tables-numbers/example-2.11-values.typ": *
+#import "../problem-tables-numbers/algorithms.typ": *
 #let BOOK_PATH = "../../books/libro-02-simulacion-promodel-garcia-garcia-cardenas.pdf"
+
+#let values_as_table(values: array) = {
+  set text(size: 9pt)
+  align(center)[
+    #table(
+      columns: 10,
+      align: center,
+      inset: 3pt,
+      stroke: 0.6pt,
+      ..values.map(x => [#fmt4(x)]),
+    )
+  ]
+}
+
 #let random_numbers_variance_test = {
   [
     Otra de las propiedades que debe satisfacer el conjunto $r_i$
@@ -44,23 +59,64 @@
 
     #let n = 40
     #let r_dash = example_2_11_values.sum() / n
-    #let alpha = 0.05
-    #let quad_devitation = example_2_11_values.map(r_i => (calc.pow((r_i - r_dash), 2))).sum()
+    #let my_alpha = 0.05
+    #let quad_deviation = example_2_11_values.map(r_i => (calc.pow((r_i - r_dash), 2))).sum()
 
     $V(r) = (limits(sum)_(i=1)^n (r_i - dash(r))^2)/(n - 1) = V(r)$
     $= (limits(sum)_(i=1)^#n (r_i - #fmt4(r_dash))^2)/(#n - 1)$ \ \
-    $V(r) = 1 / #(n - 1) #fmt4(quad_devitation) approx #fmt4(quad_devitation / (n - 1))$ \ \
-    $L S_(V(r)) = (chi^2_(alpha\/2, n - 1)) / (12(n - 1))$ = $(chi^2_(#alpha\/2, #(n - 1))) / (12(#(n - 1)))$
+    $V(r) = 1 / #(n - 1) #fmt4(quad_deviation) approx #fmt4(quad_deviation / (n - 1))$ \ \
+    $L S_(V(r)) = (chi^2_(alpha\/2, n - 1)) / (12(n - 1))$ = $(chi^2_(#my_alpha\/2, #(n - 1))) / (12(#(n - 1)))$
     $= 58.1200541 / #(12 * (n - 1))$
     $= #(58.1200541 / (12 * (n - 1)))$ $approx #fmt4((58.1200541 / (12 * (n - 1))))$ \ \
     $L I_(V(r)) = (chi^2_((1 - alpha)\/2, n - 1)) / (12(n - 1))$
-    $= (chi^2_(#(1 - alpha)\/2, #(n - 1))) / (12(#(n - 1)))$
+    $= (chi^2_(#(1 - my_alpha)\/2, #(n - 1))) / (12(#(n - 1)))$
     $= 23.6543003 / #(12 * (n - 1))$
     $= #(23.6543003 / (12 * (n - 1))) approx #fmt4((23.6543003 / (12 * (n - 1))))$
 
-    Dado que el valor de la varianza : $V(r) = #(quad_devitation / (n - 1))$ está entre
+    Dado que el valor de la varianza: $V(r) = #(quad_deviation / (n - 1))$ está entre
     los límites de aceptación, podemos decir que no se puede rechazar que el conjunto
-    de $40$ números $r_i$ tiene una varianza de $1\/2 = #fmt4(1 / 12)$
+    de $40$ números $r_i$ tiene una varianza de $1\/12 = #fmt4(1 / 12)$.
     #cite(<garcia2013simpromodel>, form: "normal", supplement: [pg.~36--37])
+
+    *Ejemplo propio*
+
+    Genere $n = 30$ números con el algoritmo de Blum, Blum y Shub y realice la prueba
+    de varianza. Utlice $X_0 = 69421, m = 2048 "y" alpha = 5% quad ("i.e." 0.05)$.
+    #let x_0 = 69421
+    #let m = 2048
+    #let my_alpha = 0.05
+    #let n = 30
+
+    #let (x_numbers, r_numbers) = blum_blum_generator(x_0: x_0, m_param: m, n_terms: 30)
+    #let r_dash = r_numbers.sum() / n
+    #let quad_deviation = r_numbers.map(r_i => (calc.pow((r_i - r_dash), 2))).sum()
+
+
+    *1. Números $X_i$ generados:*
+
+    #values_as_table(values: x_numbers)
+
+    *2. Números $r_i$ generados:*
+
+    #values_as_table(values: r_numbers)
+
+    *3. Calculando varianza:*
+
+    $dash(r) = #(r_numbers.sum() / n)$ \ \
+    $V(r) = 1 / #(n - 1) #fmt4(quad_deviation) = #(quad_deviation / (n - 1)) approx #fmt4(quad_deviation / (n - 1))$ \ \
+
+    *4. Calculando límites de aceptación inferior y superior:* \ \
+    $L S_(V(r)) = (chi^2_(#my_alpha\/2, #(n - 1)))/(12 (#(n - 1)))$ \ \
+    $L S_(V(r)) = 45.722/#(12 * (n - 1))$
+    $= #(45.722 / (12 * (n - 1))) approx #fmt4(45.622 / (12 * (n - 1)))$ \ \
+    $L I_(V(r)) = (chi^2_(#(1 - my_alpha)\/2, #(n - 1)))/(12 (#(n - 1)))$ \ \
+    $L I_(V(r)) = 17.708/#(12 * (n - 1))$
+    $= #(17.708 / (12 * (n - 1))) approx #fmt4(17.708 / (12 * (n - 1)))$ \ \
+
+    *5. Conclusión*
+
+    Dado que el valor de la varianza: $V(r) = #(quad_deviation / (n - 1))$ está entre
+    los límites de aceptación, podemos decir que no se puede rechazar que el conjunto
+    de $30$ números $r_i$ tiene una varianza de $1\/12 = #fmt4(1 / 12)$.
   ]
 }

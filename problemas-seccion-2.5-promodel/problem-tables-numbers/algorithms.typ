@@ -142,9 +142,15 @@
 }
 
 // Same as quadratic but with default parameters
-#let blum_blum_generator(x_0: int, a_param: 1, b_param: 0, c_param: 0, n_terms: int) = {
-  let m_param = a_param * b_param
-  let (prev_x_numbers, prev_r_numbers) = quadratic_congruential_generator(x_0, 1, 0, 0, m_param, n_terms + 1)
+#let blum_blum_generator(x_0: int, a_param: 1, b_param: 0, c_param: 0, n_terms: int, m_param: int) = {
+  let (x_numbers: prev_x_numbers, r_numbers: prev_r_numbers) = quadratic_congruential_generator(
+    x_0: x_0,
+    a_param: a_param,
+    b_param: b_param,
+    c_param: c_param,
+    m_param: m_param,
+    n_terms: n_terms,
+  )
 
   (
     x_numbers: prev_x_numbers,
