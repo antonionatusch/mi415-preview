@@ -1,4 +1,7 @@
 #import "../problem-tables-numbers/example-2.11-values.typ": *
+#import "../problem-tables-numbers/my-example-2.11-values.typ": (
+  generated_r_numbers_array, generated_r_numbers_table, generated_x_numbers_table,
+)
 #let BOOK_PATH = "../../books/libro-02-simulacion-promodel-garcia-garcia-cardenas.pdf"
 #let random_numbers_mean_test = {
   [
@@ -89,5 +92,45 @@
       (e.g. el valor de Z que contiene la fila donde está el valor de $0.9750$ es $1.90$ y la columna es $0.06$, entonces)
       $ "Valor" z_("fila")(0.9750) = 1.90 \ "Valor" z_("columna")(0.9750) = 0.06 \ "Valor" z_(alpha/2) = 1.90 + 0.06 = 1.96 $.
     ]
+
+    *Ejercicio propio:* \
+    Con el algoritmo congruencial cuadrático, genere 50 números pseudoaleatorios y realice la prueba de medias.
+    Utilice $X_0 = 69, m = 16, a = 14, b = 27, c = 5$ y un $N C = 99%$
+
+    *Recordatorio:* \ La función para generar los números $X_i$ es:
+    $ X_(i+1) = (a X_i^2 + b X_i + c) mod (m) quad i = 0, 1, 2, 3, dots, N $
+
+    Y para generar los números $r_i$ a partir de los $X_i$ previamente generados es:
+    $ r_i = x_i / (m-1) $
+
+    *1. Números $X_i$ generados:*
+    #generated_x_numbers_table()
+
+    *2. Números $r_i$ generados:*
+    #generated_r_numbers_table()
+
+    *3. Encontrando $dash(r)$:*
+
+    $dash(r) = 1/50limits(sum)_(i=1)^50r_i$
+
+    #let my_example_dash_r = generated_r_numbers_array.sum() / 50
+
+    #let my_example_inferior_limit_result = 1 / 2 - 2.575 * (1 / calc.sqrt(12 * 50))
+    #let my_example_superior_limit_result = 1 / 2 + 2.575 * (1 / calc.sqrt(12 * 50))
+    $dash(r) = #generated_r_numbers_array.sum() / 50 = #my_example_dash_r$
+
+    #pagebreak()
+    *4. Calculando límites $L I_(dash(r)), L S_(dash(r))$:*
+
+    a) *Calculando valor $z_(alpha\/2)$:* \
+    $z_(0.01\/2 = 0.005) approx 2.575$ (según tabla) \ \
+    b) *$L I_(dash(r))$* = $1/2 - z_(alpha\/2)(1/(sqrt(12n))) = 1/2 - z_(0.01\/2)(1/sqrt(12(50)))$ \ \
+    c) *$L I_(dash(r))$* = $1/2 - (2.575)(1/(sqrt(12(50)))) = #my_example_inferior_limit_result approx$ * $fmt4(#my_example_inferior_limit_result)$* \ \
+    d) *$L S_(dash(r))$* = $1/2 + z_(alpha\/2)(1/(sqrt(12n))) = 1/2 + z_(0.01\/2)(1/sqrt(12(50)))$ \ \
+    e) *$L S_(dash(r))$* = $1/2 + (2.575)(1/(sqrt(12(50)))) = #my_example_superior_limit_result approx$ * $fmt4(#my_example_superior_limit_result)$* \ \
+
+    Ya que $#fmt4(my_example_inferior_limit_result) <= #my_example_dash_r <= #fmt4(my_example_superior_limit_result)$,
+    no se puede rechazar la hipótesis nula, es decir, que el conjunto de 50 números
+    $r_i$ tiene un valor esperado de $0.5$ con un nivel de confianza del $99%$.
   ]
 }
