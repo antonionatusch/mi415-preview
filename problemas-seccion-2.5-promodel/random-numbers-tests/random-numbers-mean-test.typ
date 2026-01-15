@@ -77,7 +77,7 @@
     Como el valor del promedio $dash(r) = #example_2_11_numbers_avg$ se encuentra
     entre los límites de aceptación, se concluye que no se puede rechazar que
     el conjunto de 40 números $r_i$ tiene un valor esperado de $0.5$,
-    con un nivel de aceptación de $95%$.
+    con un nivel de aceptación de $95%$. #cite(<garcia2013simpromodel>, form: "normal", supplement: [pg.~35--36])
 
     *Recordatorio:* El valor de $1.96$ proviene de utilizar la tabla de la
     página 332 del libro, de la siguiente manera:
