@@ -108,5 +108,8 @@ por números aleatorios. Hay más pruebas, pero de las que se hablarán son:
 === Prueba de medias
 #random_numbers_mean_test
 
+=== Prueba de varianza
+#random_numbers_variance_test
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
