@@ -111,5 +111,8 @@ por números aleatorios. Hay más pruebas, pero de las que se hablarán son:
 === Prueba de varianza
 #random_numbers_variance_test
 
+=== Pruebas de uniformidad
+#random_numbers_uniformity_test
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
