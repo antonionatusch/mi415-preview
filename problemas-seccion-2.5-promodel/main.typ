@@ -114,5 +114,8 @@ por números aleatorios. Hay más pruebas, pero de las que se hablarán son:
 === Pruebas de uniformidad
 #random_numbers_uniformity_test
 
+==== Prueba Chi-cuadrada
+#random_numbers_chi_squared_test
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")

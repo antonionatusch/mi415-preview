@@ -6,9 +6,9 @@
     han desarrollado pruebas estadísticas tales como las pruebas
     Chi-cuadrada y de Kolmogorov-Smirnov. En cualquiera de ambos casos,
     para probar la uniformidad de los números de un conjunto $r_i$
-    es necesario formular las siguientes hipótesis:
-    $quad H_0 r_i ~ U(0,1)$ \
-    $quad H_1 r_i "no son uniformes"$
+    es necesario formular las siguientes hipótesis: \
+    $quad H_0: r_i ~ U(0,1)$ \
+    $quad H_1: r_i "no son uniformes"$
 
     Veamos a continuación cómo funciona cada una de estas pruebas.
   ]

@@ -13,3 +13,4 @@
 #import "./random-numbers-tests/random-numbers-mean-test.typ" : *
 #import "./random-numbers-tests/random-numbers-variance-test.typ" : *
 #import "./random-numbers-tests/random-numbers-uniformity-test.typ" : *
+#import "./random-numbers-tests/random-numbers-chi-squared-test.typ" : *
