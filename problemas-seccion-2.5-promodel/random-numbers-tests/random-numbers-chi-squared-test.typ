@@ -1,3 +1,4 @@
+#import "../problem-tables-numbers/example-2.13-values.typ": *
 #let random_numbers_chi_squared_test = {
   [
 
@@ -25,5 +26,11 @@
 
     Realizar la prueba Chi-cuadrada a los siguientes 100 números de un
     conjunto $r_i$ con un nivel de confianza $N C = 95% = 0.95$.
+
+    #example_2_13_values_table()
+
+    Antes de proceder, es recomendable crear una tabla similar a la
+    tabla 2.1, en donde se resumen los pasos que deben llevarse
+    a cabo en la prueba Chi-cuadrada.
   ]
 }
