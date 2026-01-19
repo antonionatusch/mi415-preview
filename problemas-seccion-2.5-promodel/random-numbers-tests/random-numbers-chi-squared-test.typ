@@ -1,4 +1,5 @@
 #import "../problem-tables-numbers/example-2.13-values.typ": *
+#import "../problem-tables-numbers/table-styles.typ": *
 #let random_numbers_chi_squared_test = {
   [
 
@@ -32,5 +33,20 @@
     Antes de proceder, es recomendable crear una tabla similar a la
     tabla 2.1, en donde se resumen los pasos que deben llevarse
     a cabo en la prueba Chi-cuadrada.
+
+    #let example_2_13_values_n = example_2_13_values.len()
+    #let example_2_13_values_m = calc.max(2, int(calc.ceil(calc.sqrt(example_2_13_values_n))))
+
+    *Tabla 2.1* Cálculos para la prueba Chi-cuadrada.
+    #chi_squared_table(values: example_2_13_values).render
+
+    #let chi_squared_table_sum = chi_squared_table(values: example_2_13_values).chi_squared_value_sum
+
+
+    El estadístico $chi^2_0 = limits(sum)_(i=1)^#example_2_13_values_m (E_i - O_i)^2/(E_i)$
+    $= #fmt4(chi_squared_table_sum)$
+    es menor al estadístico correspondiente de \ la Chi-cuadrada $X^2_(0.05, 9) = 16.9$.
+    En consecuencia, no se puede rechazar que los números $r_i$ siguen una
+    distribución uniforme.
   ]
 }
