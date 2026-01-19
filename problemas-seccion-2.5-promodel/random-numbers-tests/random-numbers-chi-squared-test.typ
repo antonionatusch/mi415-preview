@@ -48,5 +48,6 @@
     es menor al estadístico correspondiente de \ la Chi-cuadrada $X^2_(0.05, 9) = 16.9$.
     En consecuencia, no se puede rechazar que los números $r_i$ siguen una
     distribución uniforme.
+    #cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~38-39])
   ]
 }
