@@ -1,3 +1,5 @@
+#import "../problem-tables-numbers/number-tables-utils.typ" : fmt4
+
 #let tabular_layout_table(..body, column_number: 3) = {
   let pad = (x: 6pt, y: 1pt)
 
@@ -103,4 +105,17 @@
     ],
     chi_squared_value_sum: chi2,
   )
+}
+
+#let values_as_table(values: array) = {
+  set text(size: 9pt)
+  align(center)[
+    #table(
+      columns: 10,
+      align: center,
+      inset: 3pt,
+      stroke: 0.6pt,
+      ..values.map(x => [#fmt4(x)]),
+    )
+  ]
 }

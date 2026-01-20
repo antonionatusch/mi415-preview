@@ -1,5 +1,6 @@
 #import "../problem-tables-numbers/example-2.13-values.typ": *
 #import "../problem-tables-numbers/table-styles.typ": *
+#import "../problem-tables-numbers/algorithms.typ": linear_congruential_generator
 #let random_numbers_chi_squared_test = {
   [
 
@@ -49,5 +50,52 @@
     En consecuencia, no se puede rechazar que los números $r_i$ siguen una
     distribución uniforme.
     #cite(<garcia2013simpromodel>, form: "normal", supplement: [p.~38-39])
+
+    *Ejemplo propio*
+
+    Genere $n = 150$ números pseudoaleatorios utilizando el
+    método congruencial lineal con
+    $X_0 = 7$, $a = 5$, $c = 3$ y $m = 16$. Realice la prueba
+    Chi-cuadrada a los números
+    generados con un nivel de confianza $N C = 95% = 0.95$.
+    #let x_0 = 7
+    #let a_param = 5
+    #let c_param = 3
+    #let m_param = 16
+    #let n = 150
+    #let m = calc.sqrt(n)
+    #let alpha_value = 0.05
+
+    #let (x_numbers: x_values, r_numbers: r_values) = linear_congruential_generator(
+      x_0: x_0,
+      a_param: a_param,
+      c_param: c_param,
+      m_param: m_param,
+      n_terms: n,
+    )
+
+
+
+    *1. Generando números $X_i$:*
+    #values_as_table(values: x_values)
+
+    #pagebreak()
+    *2. Generando números $r_i$ a partir de los $X_i$:*
+    #values_as_table(values: r_values)
+
+    *3. Creando tabla para la prueba Chi-cuadrada:*
+    #chi_squared_table(values: r_values).render
+    #let my_example_chi_squared_sum = chi_squared_table(values: r_values).chi_squared_value_sum
+
+    *4. Realizando sumatoria:*
+    $X_0^2 = limits(sum)_(i=1)^#n (E_i-O_i)^2/E_i = #my_example_chi_squared_sum$
+
+    *5. Encontrando estadístico de $X_(#alpha_value, #fmt4(m - 1) approx 11)$:*
+    Según la tabla en la página 335 del libro, el valor es $19.675$.
+
+    *6. Conclusión:*
+    Como $#my_example_chi_squared_sum < 19.675$, se concluye que no se puede
+    rechazar que los números $r_i$ siguen una distribución
+    uniforme.
   ]
 }
