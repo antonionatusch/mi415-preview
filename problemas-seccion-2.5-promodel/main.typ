@@ -118,4 +118,8 @@ por números aleatorios. Hay más pruebas, pero de las que se hablarán son:
 #random_numbers_chi_squared_test
 
 #pagebreak()
+==== Prueba Kolmogorov-Smirnov
+#random_numbers_kolmogorov_smirnov_test
+
+#pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
