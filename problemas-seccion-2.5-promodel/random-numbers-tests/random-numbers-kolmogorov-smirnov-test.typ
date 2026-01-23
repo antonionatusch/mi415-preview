@@ -1,4 +1,5 @@
 #import "../problem-tables-numbers/example-2.14-values.typ": *
+#import "../problem-tables-numbers/my-example-2.14-values.typ": *
 #import "../problem-tables-numbers/table-styles.typ": ks_table
 #let BOOK_PATH = "../../books/libro-02-simulacion-promodel-garcia-garcia-cardenas.pdf"
 
@@ -70,5 +71,27 @@
     se concluye que los números del conjunto $r_i$
     se disribuyen uniformemente.
     #cite(<garcia2013simpromodel>, form: "normal", supplement: [pgs.~38--40])
+
+    *Ejemplo propio*
+    Genere $n = 15$ números aleatorios y aplique la prueba
+    Kolmogorov-Smirnov con un nivel de confianza de
+    $N C = 95% = 0.95$.
+    El nivel de confianza de 95% implica $alpha = 5% = 0.05$.
+    #let my_alpha = 0.05
+
+    *1. Números $r_i$:*
+    $ #my_example_2_14_values.map(str).join(", ") $
+
+    *2. Ordenar los números:*
+    $ #my_example_2_14_values.sorted().map(str).join(", ") $
+
+    Para determinar los valores de $D^+, D^- y D$ es
+    recomendable realizar una tabla como la siguiente:
+
+    #ks_table(values: my_example_2_14_values)
+
+    #pagebreak()
+    Volviendo a ver la @ks-critical-values, nos damos cuenta que
+    // TODO: agregar conclusión para el nuevo ejemplo
   ]
 }
