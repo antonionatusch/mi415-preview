@@ -92,6 +92,10 @@
 
     #pagebreak()
     Volviendo a ver la @ks-critical-values, nos damos cuenta que
-    // TODO: agregar conclusión para el nuevo ejemplo
+    el valor crítico $D_(0.05, 15)$ según tablas es es $0.338$.
+
+    Como el valor $D = 0.08$ es menor que el valor crítico
+    $0.338$, entonces se concluye que los números del conjunto $r_i$
+    se disribuyen uniformemente.
   ]
 }
