@@ -22,7 +22,7 @@
           con las siguientes ecuaciones:
 
           $ D^+ = max_(1<=i<=n) { i/n - r_i } $
-          $ D^- = max_(1<=i<=n) { n - i / n } $
+          $ D^- = max_(1<=i<=n) { r_i - i / n } $
           $ D = max(D^+, D^-) $
         ],
         [Determinar el valor crítico $D_(alpha,n)$ de acuerdo con
@@ -85,7 +85,7 @@
     *2. Ordenar los números:*
     $ #my_example_2_14_values.sorted().map(str).join(", ") $
 
-    Para determinar los valores de $D^+, D^- y D$ es
+    Para determinar los valores de $D^+, D^- "y" D$ es
     recomendable realizar una tabla como la siguiente:
 
     #ks_table(values: my_example_2_14_values)
