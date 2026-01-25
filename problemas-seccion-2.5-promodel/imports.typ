@@ -16,3 +16,4 @@
 #import "./random-numbers-tests/random-numbers-chi-squared-test.typ" : *
 #import "./random-numbers-tests/random-numbers-kolmogorov-smirnov-test.typ" : *
 #import "./random-numbers-tests/random-numbers-independence-tests-intro.typ" : *
+#import "./random-numbers-tests/random-numbers-runs-test.typ" : *

@@ -124,5 +124,8 @@ por números aleatorios. Hay más pruebas, pero de las que se hablarán son:
 === Pruebas de independencia
 #random_numbers_independence_tests_intro
 
+=== Prueba de corridas arriba y abajo
+#random_numbers_runs_test
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
