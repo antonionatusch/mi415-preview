@@ -121,5 +121,7 @@ por números aleatorios. Hay más pruebas, pero de las que se hablarán son:
 ==== Prueba Kolmogorov-Smirnov
 #random_numbers_kolmogorov_smirnov_test
 
+=== Pruebas de independencia
+
 #pagebreak()
 #bibliography("references/references.bib", style: "american-psychological-association")
