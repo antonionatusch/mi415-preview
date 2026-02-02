@@ -34,3 +34,5 @@
       }
     })
 }
+
+#let zeros_and_ones_run_generator
