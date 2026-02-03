@@ -1,4 +1,5 @@
 #import "../problem-tables-numbers/example-2.15-values.typ": *
+#import "../problem-tables-numbers/my-example-2.15-values.typ": *
 #let random_numbers_runs_test = {
   [
     El procedimiento de esta prueba consiste en determinar una
@@ -99,5 +100,51 @@
     los números son aptos para usarse en simulación.
     \
     #cite(<garcia2013simpromodel>, form: "normal", supplement: [pgs.~41--42])
+
+    *Ejemplo propio*
+    #let my_confidence_level = 0.95
+    #let my_alpha = 1 - my_confidence_level
+    Realizar la prueba de corridas arriba y abajo con un $N C = 95% = #my_confidence_level$
+    al siguiente conjunto de 50 números $r_i$:
+
+    #my_example_2_15_values_table()
+
+    #pagebreak()
+    *1. Realizar asignación de unos y ceros por fila:*
+
+    #let my_example_s_sequence = my_example_2_15_zeros_ones_run(values: my_example_2_15_values)
+    #text(size: 10pt)[
+      $
+        S = {#my_example_s_sequence.slice(0, 30).map(str).join(", ") \
+          #my_example_s_sequence.slice(30).map(str).join(", ")}
+      $
+    ]
+
+
+    #let my_example_c_o = sequence_runs_numbers(run: my_example_s_sequence)
+    Y el número de corridas $C_o = #my_example_c_o$
+    y $alpha = 5% = #fmt4(my_alpha)$
+
+    *2. Cálculos para el valor esperado y la varianza del número de corridas:*
+
+    #let my_example_mu_sub_c_o = (2 * my_example_2_15_values.len() - 1) / 3
+    #let my_example_sigma_squared_sub_c_o = (16 * my_example_2_15_values.len() - 29) / 90
+    #let my_example_zeta = calc.abs(
+      (my_example_c_o - my_example_mu_sub_c_o) / calc.sqrt(my_example_sigma_squared_sub_c_o),
+    )
+
+    $ mu_(C_o) = (2n - 1) / 3 = #my_example_mu_sub_c_o approx #fmt4(my_example_mu_sub_c_o) $
+    $
+      sigma^2_C_o = (16n - 29)/ 90 = #my_example_sigma_squared_sub_c_o approx #fmt4(my_example_sigma_squared_sub_c_o)
+    $
+    $ Z_0 = abs((C_o - mu_C_o) / sigma_C_o) = #my_example_zeta approx #fmt4(my_example_zeta) $
+
+    *3. Buscar valor de tabla y conclusiones:* \
+    Como el estadístico $Z_0$ es menor que el valor de tabla de la
+    normal estándar para $Z_(alpha\/2) = Z_(0.05\/2) = 1.96$, se
+    concluye que no se puede rechazar que los números del conjunto
+    $r_i$ son independientes. Es decir, de acuerdo con esta prueba,
+    los números son aptos para usarse en simulación.
+    \
   ]
 }
